@@ -1,13 +1,13 @@
-///6.7-6.9二叉链表
+///6.7-6.9浜屽弶閾捐〃
 import java.util.Scanner;
-/**二叉链表结点结构*/
+/**浜屽弶閾捐〃缁撶偣缁撴瀯*/
 class Node{
 	Node lChild;
     Node rChild;
     Object data;
 }
 public class Main6_7 {
-	/**前序遍历*/
+	/**鍓嶅簭閬嶅巻*/
 	public static void preOrderTraverse(Node root){
 		if(root == null){
 			return;
@@ -16,7 +16,7 @@ public class Main6_7 {
 		preOrderTraverse(root.lChild);
 		preOrderTraverse(root.rChild);
 	}
-	/**中序遍历*/
+	/**涓簭閬嶅巻*/
 	public static void inOrderTraverse(Node root){
 		if(root == null)
 			return;
@@ -24,15 +24,15 @@ public class Main6_7 {
 		System.out.print(root.data+" ");
 		inOrderTraverse(root.rChild);
 	}
-	/**后序遍历*/
+	/**鍚庡簭閬嶅巻*/
 	public static void postOrderTraverse(Node root){
 		if(root == null)
 			return;
-		inOrderTraverse(root.lChild);
-		inOrderTraverse(root.rChild);
+		postOrderTraverse(root.lChild);
+		postOrderTraverse(root.rChild);
 		System.out.print(root.data+" ");
 	}
-	/**构造二叉链表表示二叉树t,#表示空树*/
+	/**鏋勯�犱簩鍙夐摼琛ㄨ〃绀轰簩鍙夋爲t,#琛ㄧず绌烘爲*/
 	public static void createBiTree(Node node){
 		Scanner input = new Scanner(System.in);
 		char c = input.nextLine().split("\\s+")[0].charAt(0);
